@@ -1,0 +1,23 @@
+﻿<Window x:Class="HideMyFace.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HideMyFace - Settings" Height="300" Width="300">
+    <StackPanel Margin="10">
+        <TextBlock Text="Censorship type:"/>
+        <ComboBox x:Name="CensorshipType" SelectedIndex="0">
+            <ComboBoxItem Content="Black cube"/>
+            <ComboBoxItem Content="White cube"/>
+            <ComboBoxItem Content="Pixels"/>
+            <ComboBoxItem Content="Blur"/>
+        </ComboBox>
+
+        <TextBlock Text="Scale:" Margin="0,10,0,0"/>
+        <Slider x:Name="EffectSize" Minimum="5" Maximum="50" Value="20"/>
+
+        <TextBlock Text="Cameras:" Margin="0,10,0,0"/>
+        <ComboBox x:Name="CameraSelector" SelectedIndex="0" />
+
+        <Button Content="Output" Margin="0,20,0,0"
+                Click="OpenPreview_Click"/>
+    </StackPanel>
+</Window>
